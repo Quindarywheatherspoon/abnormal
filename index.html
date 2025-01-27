@@ -7,7 +7,13 @@
 </head>
 <body>
 
-    <button type="button" id="mybutton" style="background: green; color:white; border-color:white; border-radius: 15px; border-width: 0px" onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='green'" onclick="Freedom_Project()">Freedom Project</button> 
+    <div style="margin-bottom: 20px;"> <!-- Adding margin for spacing -->
+        <button type="button" id="mybutton" style="background: green; color:white; border-color:white; border-radius: 15px; border-width: 0px" 
+        onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='green'" onclick="Freedom_Project()">Freedom Project</button> 
+
+        <button type="button" id="mybutton" style="background: green; color:white; border-color:white; border-radius: 15px; border-width: 0px" 
+        onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='green'" onclick="tutorial()">Freedom Project Tutorial</button> 
+    </div>
 
     <script>
         function Freedom_Project() {
@@ -23,30 +29,21 @@
             win.document.body.style.padding = "0";
             win.document.body.style.background = "none";
         }
+
+        function tutorial() {
+            var win = window.open();
+            var url = "https://www.youtube-nocookie.com/embed/zG_DXUqeG0A";
+            var objectElement = win.document.createElement('object');
+            objectElement.style.width = "100%";
+            objectElement.style.height = "100%";
+            objectElement.style.border = "none";
+            objectElement.data = url;
+            win.document.body.appendChild(objectElement);
+            win.document.body.style.margin = "0";
+            win.document.body.style.padding = "0";
+            win.document.body.style.background = "none";
+        }
     </script>
-
-<button type="button" id="mybutton" style="background: green; color:white; border-color:white; border-radius: 15px; border-width: 0px" onmouseover="this.style.backgroundColor='green'" onmouseout=
-"this.style.backgroundColor='green'" onclick="tutorial()">Freedom Project Tutorial</button> 
-<script>
-
-
-/* <![CDATA[ */
-
-function tutorial() {
-var win = window.open()
-var url = "https://www.youtube-nocookie.com/embed/zG_DXUqeG0A"
-var iframe = win.document.createElement('iframe')
-iframe.style.width = "100%";
-iframe.style.height = "100%";
-iframe.style.border = "none";
-iframe.src = url
-win.document.body.appendChild(iframe)
-win.document.body.style.margin = "0";
-win.document.body.style.padding = "0";
-win.document.body.style.background = "none";
-}
-/*]]>*/
-</script> 
 
     <button type="button" id="mybutton" style="background: black; color: goldenrod; border-color: orange; border-radius: 8px;" onclick="tentill()">10 Minutes Till Dawn</button> 
     <button type="button" id="mybutton" style="background: black; color: goldenrod; border-color: orange; border-radius: 8px;" onclick="ADR()">A Dark Room</button> 
